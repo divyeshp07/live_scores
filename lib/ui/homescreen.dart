@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Container(
                       height: 50.0,
-                      width: 72.0,
+                      width: 64.0,
                       decoration: const BoxDecoration(
                         color: kSkyBlueColor,
                         borderRadius: BorderRadius.all(
