@@ -155,7 +155,7 @@ class _EventDetailsState extends State<EventDetails> {
         children: [
           Container(
             width: double.infinity,
-            height: double.infinity,
+            height: MediaQuery.sizeOf(context).height,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -267,6 +267,7 @@ class _EventDetailsState extends State<EventDetails> {
                                               width: 30,
                                               decoration: const BoxDecoration(
                                                   color: kLightCircleColor,
+                                                  // color: Colors.amberAccent,
                                                   shape: BoxShape.circle),
                                               child: Padding(
                                                 padding:
@@ -430,7 +431,7 @@ class _EventDetailsState extends State<EventDetails> {
                                 ),
                                 Container(
                                   margin: const EdgeInsets.only(top: 20),
-                                  height: 300,
+                                  height: 280,
                                   color: Colors.transparent,
                                   child: ListView.builder(
                                     physics: const BouncingScrollPhysics(),
@@ -476,15 +477,20 @@ class _EventDetailsState extends State<EventDetails> {
                                                           FontWeight.w700,
                                                     ),
                                                   ),
-                                                  Text(
-                                                    about[index],
-                                                    style: const TextStyle(
-                                                        color: kWhiteColor,
-                                                        fontFamily:
-                                                            'Poppins-Medium',
-                                                        fontSize: 12,
-                                                        overflow:
-                                                            TextOverflow.clip),
+                                                  SizedBox(
+                                                    width: 200,
+                                                    child: Text(
+                                                      about[index],
+                                                      // maxLines: ,
+                                                      overflow: TextOverflow.ellipsis,
+                                                      style: const TextStyle(
+                                                          color: kWhiteColor,
+                                                          fontFamily:
+                                                              'Poppins-Medium',
+                                                          fontSize: 12,
+                                                          overflow:
+                                                              TextOverflow.clip),
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -595,7 +601,7 @@ class _EventDetailsState extends State<EventDetails> {
         const Spacer(),
         Container(
           height: 60,
-          width: 70,
+          width: 48,
           decoration: const BoxDecoration(
               color: Color(0xffc7c1bc), shape: BoxShape.circle),
           child: Padding(
